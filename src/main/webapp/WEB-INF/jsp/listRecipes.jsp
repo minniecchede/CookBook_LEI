@@ -1,16 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Recipes</title>
-</head>
-<body>
-<ul>
-<c:forEach var="item" items='${items}'>
-	<li><c:out value="${item}"></c:out></li>
-</c:forEach>
-</ul>
-</body>
-</html>
+<%@ include file="header.jsp" %>
+<div class="container_list">
+	<h2>Listar Receitas</h2>
+    <hr>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Titulo</th>
+				<th>Problema</th>
+				<th>Solução</th>
+			</tr>
+		</thead>
+		<tbody>
+		<c:forEach var="recipe" items='${recipes}'>
+			<tr>
+			<td>${recipe.id}</td>
+			<td><a href="/recipes/${recipe.id}"> ${recipe.titulo}</a></br></td>
+			<td>${recipe.problema}</td>
+			<td>${recipe.solucao}</td>
+			</tr>
+	 	</c:forEach>
+		</tbody>
+	</table>
+	<a href="/" class="btn btn-success">Voltar</a>
+    </div>
+
+<%@ include file="footer.jsp" %>

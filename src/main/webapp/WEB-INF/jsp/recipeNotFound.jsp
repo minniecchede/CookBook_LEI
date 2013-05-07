@@ -5,6 +5,6 @@
 <title>Recipe Not Found</title>
 </head>
 <body>
-    This is not the recipe you are looking for....
+    A receita procurada nao foi encontrada!
 </body>
 </html>
