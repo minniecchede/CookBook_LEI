@@ -2,6 +2,7 @@ package pt.ulht.es.cookbook.controller;
 
 import java.util.Collection;
 import java.util.Map;
+import java.util.Date;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,7 +36,8 @@ public class RecipeController {
     	String titulo = params.get("titulo");
     	String problema = params.get("problema");
     	String solucao = params.get("solucao");
-    	Recipe recipe = new Recipe(titulo, problema, solucao);
+    	Date dataCriacao = new Date();
+    	Recipe recipe = new Recipe(titulo, problema, solucao, dataCriacao);
     	CookbookManager.saveRecipe(recipe);
     	
     	return "redirect:/recipes/"+recipe.getId();

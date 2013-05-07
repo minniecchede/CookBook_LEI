@@ -1,10 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Recipe Not Found</title>
-</head>
-<body>
-<img src="https://dl-web.dropbox.com/get/TrabalhoES/notfound.gif?w=AACCCRBJ1WTQemw87r_5TQWdRmxkCE2te9NjjHzcAfpXBQ">
-</body>
-</html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="header.jsp" %>
+
+<div class="page-header">
+  <h1 align="center">Error 404: Recipe Not Found</h1>
+</div>
+<img style="margin-left:300px;" src="/static/img/notfound.gif">
+
+<%@ include file="footer.jsp" %>

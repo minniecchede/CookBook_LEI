@@ -70,8 +70,21 @@ form{
 
 .create_btn{
 	margin-left:410px;
-
 }
+
+#footer{
+	background-color:#000;
+	width:100%;
+	height:49px;
+	margin-top:140px;
+	border-top:10px solid #4db3d1;
+	}
+
+#footer p{
+	color:#fff;
+	margin-left:560px;
+	margin-top:15px;
+	}	
 
 	
 </style>
