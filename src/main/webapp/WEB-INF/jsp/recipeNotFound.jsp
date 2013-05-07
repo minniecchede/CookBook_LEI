@@ -5,6 +5,6 @@
 <title>Recipe Not Found</title>
 </head>
 <body>
-    A receita procurada nao foi encontrada!
+<img src="https://dl-web.dropbox.com/get/TrabalhoES/notfound.gif?w=AACCCRBJ1WTQemw87r_5TQWdRmxkCE2te9NjjHzcAfpXBQ">
 </body>
 </html>

@@ -7,11 +7,11 @@
 
 <!--<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 -->
-<link rel="stylesheet" href="https://dl-web.dropbox.com/get/TrabalhoES/bootstrap-responsive.min.css?w=AACjL6CIl1BfmT9rbr9__2r5vpxVZ1gurFjihmmdL3a5Gw">
-<link rel="stylesheet" href="https://dl-web.dropbox.com/get/TrabalhoES/bootstrap.min.css?w=AABdYEVKOiRJQbiIZ8hIgyXXLsEzq5BBcnxzqnvfcp51wQ">
-<link rel="stylesheet" href="https://dl-web.dropbox.com/get/TrabalhoES/bootstrap.css?w=AAADUm1O4KUmOzreWyYxkGIiRdlrPZZMTeDVMrEniCoZWQ">
-<script src="https://dl-web.dropbox.com/get/TrabalhoES/bootstrap.js?w=AADeN9xqVuPT8gvSbw25TsG_ABZMvaRkTMsXZ117ALvvwQ"></script>
-<script src="https://dl-web.dropbox.com/get/TrabalhoES/bootstrap.min.js?w=AAA8h95vX_nZjREnyICZW_Mi7wjpP_U0fcSTsmoTZjU-ug"></script>
+<link rel="stylesheet" href="/static/css/bootstrap-responsive.min.css">
+<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/css/bootstrap.css">
+<script type="text/javascript" src="/static/css/bootstrap.js"></script>
+<script type="text/javascript" src="/static/css/bootstrap.min.js"></script>
 <style>
 body{
 	font-family:Verdana, Geneva, sans-serif;
@@ -34,7 +34,7 @@ body{
 	-webkit-box-shadow:0 1px 2px rgba(0,0,0,.05);
 	box-shadow:0 1px 2px rgba(0,0,0,.05);
 	max-width:300px;
-	padding:19px 29px 29px;
+	padding:19px 19px 19px;
 	margin:0 auto 20px;
 	}
 
@@ -57,6 +57,22 @@ form{
 	margin-left:50px;
 	
 	}	
+
+.btn_create{
+	margin-top:10px;
+
+}	
+
+.form-search{
+	margin-left:540px;
+	margin-top:-41px;
+}
+
+.create_btn{
+	margin-left:410px;
+
+}
+
 	
 </style>
 

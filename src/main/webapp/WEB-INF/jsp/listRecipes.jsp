@@ -3,7 +3,12 @@
 <%@ include file="header.jsp" %>
 <div class="container_list">
 	<h2>Listar Receitas</h2>
+    <form class="form-search">
+     <input type="text" class="input-medium search-query">
+     <button type="submit" class="btn">Search</button>
+    </form>
     <hr>
+    
 	<table class="table table-striped">
 		<thead>
 			<tr>
@@ -25,6 +30,9 @@
 		</tbody>
 	</table>
 	<a href="/" class="btn btn-success">Voltar</a>
+    </div>
+    <div class="create_btn">
+   		<a href="/recipes/create" class="btn btn-info">Criar Receita</a>
     </div>
 
 <%@ include file="footer.jsp" %>

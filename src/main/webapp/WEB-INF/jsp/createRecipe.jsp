@@ -11,9 +11,10 @@
     <input type="text" name="titulo" placeholder="Titulo">
     <textarea type="text" name="problema" placeholder="Problema"></textarea>
     <textarea type="text" name="solucao" placeholder="Solução"></textarea></br>
-
+    <div class="btn_create">
     <button type="submit" class="btn btn-success">Inserir Receita</button>
     <a href="/" class="btn btn-danger">Voltar</a>
+    </div>
   </fieldset>
 </form>
 </div>
