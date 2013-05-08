@@ -8,14 +8,19 @@ public class Recipe {
 	private String titulo;
 	private String problema;
 	private String solucao;
-	
 	private Date dataCriacao;
+	private String nome;
 
-	public Recipe(String titulo, String problema, String solucao, Date dataCriacao) {
+	public Recipe(String titulo, String problema, String solucao, Date dataCriacao, String nome) {
 		this.titulo=titulo;
 		this.problema=problema;
 		this.solucao=solucao;
 		this.dataCriacao=dataCriacao;
+		this.nome=nome;
+	}
+	
+	public String getNome(){
+		return nome;
 	}
 	
 	public Date getDataCriacao(){

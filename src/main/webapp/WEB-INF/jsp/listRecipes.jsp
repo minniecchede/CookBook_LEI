@@ -18,6 +18,7 @@
 				<th>Titulo</th>
 				<th>Problema</th>
 				<th>Solução</th>
+				<th>Autor</th>
                 <th>Data</th>
 			</tr>
 		</thead>
@@ -28,6 +29,7 @@
 			<td><a href="/recipes/${recipe.id}"> ${recipe.titulo}</a></br></td>
 			<td>${recipe.problema}</td>
 			<td>${recipe.solucao}</td>
+			<td>${recipe.nome}</td>
             <td><fmt:formatDate value="${recipe.dataCriacao}" pattern="yyyy-MM-dd HH:mm:ss" /></td>
 			</tr>
 	 	</c:forEach>

@@ -37,7 +37,8 @@ public class RecipeController {
     	String problema = params.get("problema");
     	String solucao = params.get("solucao");
     	Date dataCriacao = new Date();
-    	Recipe recipe = new Recipe(titulo, problema, solucao, dataCriacao);
+    	String nome = params.get("nome");
+    	Recipe recipe = new Recipe(titulo, problema, solucao, dataCriacao, nome);
     	CookbookManager.saveRecipe(recipe);
     	
     	return "redirect:/recipes/"+recipe.getId();

@@ -13,6 +13,7 @@
 <hr>
 <b>Problema:</b> <p>${recipe.problema}</p>
 <b>Solução:</b> <p>${recipe.solucao}</p>
+<b>Autor:</b> <p>${recipe.nome}</p>
 <b>Data:</b> <p><fmt:formatDate value="${recipe.dataCriacao}" pattern="yyyy-MM-dd HH:mm:ss" /></p>
 
 <a href="/recipes" class="btn btn-success">Voltar Listar</a>
