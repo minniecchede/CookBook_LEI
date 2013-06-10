@@ -1,50 +1,50 @@
 package pt.ulht.es.cookbook.domain;
 
-import java.util.Date;
 
 
-public class Recipe {
-	private String id;
-	private String titulo;
-	private String problema;
-	private String solucao;
-	private Date dataCriacao;
-	private String nome;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-	public Recipe(String titulo, String problema, String solucao, Date dataCriacao, String nome) {
-		this.titulo=titulo;
-		this.problema=problema;
-		this.solucao=solucao;
-		this.dataCriacao=dataCriacao;
-		this.nome=nome;
-	}
-	
-	public String getNome(){
-		return nome;
-	}
-	
-	public Date getDataCriacao(){
-		return dataCriacao;
-	}
-	
-	public String getTitulo(){
-		return titulo;
-	}
-	
-	public String getProblema(){
-		return problema;
-	}
-	
-	public String getSolucao(){
-		return solucao;
-	}
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
-	public String getId() {
-		return id;
+
+
+public class Recipe extends Recipe_Base {
+
+
+	public Recipe(String title, String problem, String solution, String author) {
+		Version firstVersion = new Version(title, problem, solution, author);
+		addVersion(firstVersion);
+		setCookbookManager(CookbookManager.getInstance());
+	}
+	
+	public void update(String title, String problem, String solution, String author) {
+		Version newVersion = new Version(title, problem, solution, author);
+		addVersion(newVersion);
+    }
+
+	public void delete() {
+		
+		for (Version version : getVersionSet()) {
+			version.delete();
+		}
+		
+		setCookbookManager(null);
+		super.deleteDomainObject();
+		
+		
 	}
 
-	public void setId(String id) {
-		this.id=id;
+	public Version getLastVersion() {
+		List<Version> versions = new ArrayList<Version>(getVersionSet());
+		Collections.sort(versions);
+
+		return versions.get(0);
 	}
+
+
 
 }

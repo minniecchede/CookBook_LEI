@@ -59,6 +59,12 @@ form{
 	margin-left:410px;
 }
 
+#btn_voltar{
+	margin-top:50px;
+	margin-left:-190px;
+
+}
+
 #footer{
 	background-color:#000;
 	width:100%;

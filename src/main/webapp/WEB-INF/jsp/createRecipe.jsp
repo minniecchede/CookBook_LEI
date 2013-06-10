@@ -8,10 +8,12 @@
   <fieldset>
     <h2>Criar Receita</h2>
     <hr>
-    <input type="text" name="titulo" placeholder="Titulo">
-    <textarea style="overflow: hidden;" onkeyup="this.style.height='24px'; this.style.height = this.scrollHeight + 12 + 'px'; type="text" name="problema" placeholder="Problema"></textarea>
-    <textarea style="overflow: hidden;" onkeyup="this.style.height='24px'; this.style.height = this.scrollHeight + 12 + 'px'; type="text" name="solucao" placeholder="Solução"></textarea></br>
-    <input type="text" name="nome" placeholder="Autor">
+    <input type="text" name="title" placeholder="Titulo" required>
+    <textarea style="overflow:hidden;" type="text" name="problem" placeholder="Problema" required></textarea>
+    <textarea style="overflow:hidden;" type="text" name="solution" placeholder="Solução" required></textarea></br>
+    <input type="text" name="author" placeholder="Autor" required>
+    <input name="tag" type="text" placeholder="Tags" required>
+    
     <div class="btn_create">
     <button type="submit" class="btn btn-success">Inserir Receita</button>
     <a href="/" class="btn btn-danger">Voltar</a>

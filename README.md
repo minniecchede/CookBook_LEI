@@ -7,3 +7,4 @@
 #### Versão 1.0:
 - Receitas podem ser criadas
 - Receitas podem ser listadas
+- Receitas podem ser procuradas
