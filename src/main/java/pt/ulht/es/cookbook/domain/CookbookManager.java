@@ -4,6 +4,7 @@ import pt.ist.fenixframework.FenixFramework;
 
 public class CookbookManager extends CookbookManager_Base {
     
+	/*obter a unica instancia da classe cookbookmanager, o singleton da nossa app*/
     public static CookbookManager getInstance() {
         return FenixFramework.getRoot();
     }

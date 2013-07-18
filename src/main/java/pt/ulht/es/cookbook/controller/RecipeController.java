@@ -24,6 +24,7 @@ public class RecipeController {
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/recipes")
 	public String listRecipes(Model model) {
+		//um cookbook tem varias receiras -->getRecipeSet
 		Set<Recipe> recipes = CookbookManager.getInstance().getRecipeSet();
 		List<Version> lastVersionsList = new ArrayList<Version>();
 		
@@ -48,8 +49,10 @@ public class RecipeController {
 	public String deleteRecipe(@PathVariable("id") String id) {
 		//Recipe recipe = AbstractDomainObject.fromExternalId(id);
 		//recipe.delete();
+		//Ir buscar a receita a base de dados
 		 Version version = AbstractDomainObject.fromExternalId(id);
          Recipe recipe = version.getRecipe();
+         //mandar apagar o objecto
          recipe.delete();
 		return "redirect:/recipes";
 	}
@@ -68,11 +71,13 @@ public class RecipeController {
 	public String editRecipe(@RequestParam Map<String, String> params, @PathVariable String id) {
 		Version version = AbstractDomainObject.fromExternalId(id);
 		String titleVersion = version.getTitleVersion();
+		//codigo que vai buscar cada um dos parametros
 		String problemVersion = params.get("problemVersion");
 		String solutionVersion = params.get("solutionVersion");
 		String authorVersion = params.get("authorVersion");
 		String tagVersion[] = params.get("tagVersion").split(";");
 		Recipe recipe = version.getRecipe();
+		//metodo edit onde passamos todos os campos
 		recipe.update(titleVersion, problemVersion, solutionVersion, authorVersion);
 		
 		Version lastVersion = recipe.getLastVersion();
@@ -100,7 +105,7 @@ public class RecipeController {
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/recipes/{id}")
-	public String showRecipe(Model model, @PathVariable String id, String versao) {
+	public String showRecipe(Model model, @PathVariable String id) {
 		//Recipe recipe = AbstractDomainObject.fromExternalId(id);
 		Version version = AbstractDomainObject.fromExternalId(id);
 		Recipe recipe = version.getRecipe();
@@ -118,12 +123,13 @@ public class RecipeController {
 
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/versions/{id}")
-	public String showVersion(Model model, @PathVariable String id, String versao) {
+	public String showVersion(Model model, @PathVariable String id) {
 		
 		Version version = AbstractDomainObject.fromExternalId(id);
 		Recipe recipe = version.getRecipe();
 		List<Version> versionList = new ArrayList<Version>(recipe.getVersionSet());
 		int versionCount = recipe.getVersionCount();
+		//modelos para passar as versoes ao jsp
 		model.addAttribute("versionCount", versionCount);
 		model.addAttribute("versionList", versionList);
 		model.addAttribute("version", version);

@@ -24,6 +24,7 @@ public class Version extends Version_Base implements Comparable<Version>{
     }
     
     public void delete() {
+    	//retirar a ligação da Recipe com a BD
 		setRecipe(null);
 		for(Tag tag : getTagSet()) {
 			removeTag(tag);
