@@ -13,4 +13,5 @@ Manual de Utilização:
 7. Verificar na BD se as tabelas foram criadas
 8. Caso tenha corrido tudo bem na localização onde diz 'Goals:' escreve-se o seguinte comando: clean package jetty:start e de seguinda em run
 
-
+URL para visualização de imagens da aplicação:
+https://mega.co.nz/#!YNxCHIBI!Iyg8nScBZRetRIe02HKiFj_-gTMfBkbSzCv_xeWEj08
